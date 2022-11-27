@@ -14,7 +14,7 @@ export const NavBar = () => {
         className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`}
         to='/internal'
       >
-        Página Interna
+        Ver Todo
       </NavLink>
     </nav>
   )

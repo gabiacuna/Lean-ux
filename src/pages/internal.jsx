@@ -4,6 +4,9 @@ import { Button } from '@mui/material'
 import NavBar from '../components/nav_bar'
 import LogoUSM from '../assets/usm.png'
 
+import StaticDatePickerLandscape from '../components/calendar'
+import { StyledEngineProvider } from '@mui/material/styles';
+
 export const InternalPage = () => {
   return (
     <div className='page'>
@@ -12,6 +15,9 @@ export const InternalPage = () => {
       <h2>Página Interna</h2>
       <img src={LogoUSM} height={100} alt='logo usm' /><br />
       <Button variant='contained'>Material UI Button</Button>
+      <StyledEngineProvider injectFirst>
+        <StaticDatePickerLandscape/>
+      </StyledEngineProvider>
     </div>
   )
 }

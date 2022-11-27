@@ -11,3 +11,35 @@ html, body {
 * {
   font-family: 'Open Sans', sans-serif;
 }
+
+.rowC{display:flex; flex-direction:row; gap: 10px;}
+
+.Demo__some-network {
+  vertical-align: top;
+  display: inline-block;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.Demo__some-network__share-count {
+  display: inline-flex;
+  justify-content: center;
+  white-space: nowrap;
+  overflow: visible;
+  width: 0;
+  margin-top: 3px;
+  font-size: 12px;
+}
+
+.Demo__some-network__share-button {
+  cursor: pointer;
+}
+
+.Demo__some-network__share-button:hover:not(:active) {
+  opacity: 0.75;
+}
+
+.Demo__some-network__custom-icon {
+  width:32px;
+  height:32px;
+}
