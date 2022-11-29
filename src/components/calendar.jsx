@@ -2,25 +2,25 @@ import * as React from 'react';
 import dayjs from 'dayjs';
 import TextField from '@mui/material/TextField';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { LocalizationProvider, esES} from '@mui/x-date-pickers';
 import { StaticDatePicker } from '@mui/x-date-pickers';
+import esLocale from 'date-fns/locale/es'
 
-const isWeekend = (date) => {
-  const day = date.day();
+import 'moment/locale/es';
 
-  return day === 0 || day === 6;
-};
 
 export function StaticDatePickerLandscape() {
-  const [value, setValue] = React.useState(dayjs('2022-04-07'));
+  const [value, setValue] = React.useState(dayjs('2022-11-28'));
+
+  // moment.locale('es');
 
   return (
-    <LocalizationProvider dateAdapter={AdapterDayjs}>
+    <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale={esLocale}>
       <StaticDatePicker
-        orientation="landscape"
+        orientation="portrait"
         openTo="day"
         value={value}
-        shouldDisableDate={isWeekend}
+        inputFormat="dd-mm-yyyyy"
         onChange={(newValue) => {
           setValue(newValue);
         }}

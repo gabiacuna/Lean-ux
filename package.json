@@ -16,8 +16,10 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.10.16",
     "@mui/lab": "^5.0.0-alpha.109",
-    "@mui/material": "^5.10.12",
+    "@mui/material": "^5.10.16",
+    "@mui/styled-engine-sc": "^5.10.16",
     "@mui/x-date-pickers": "^5.0.9",
     "date-fns": "^2.29.3",
     "dayjs": "^1.11.6",
@@ -27,7 +29,8 @@
     "react-redux": "^7.2.5",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.4.0",
-    "react-share": "^4.4.1"
+    "react-share": "^4.4.1",
+    "styled-components": "^5.3.6"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.17.0",

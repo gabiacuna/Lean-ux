@@ -3,11 +3,75 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea, CardActions } from '@mui/material';
+import { CardActionArea, CardActions, ListItemText } from '@mui/material';
 import minec from '../assets/test.png'
 import minec2 from '../assets/test2.png'
-import Share from './share'
 
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+
+
+export function BasicMenu() {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  return (
+    <div>
+      <Button
+        id="basic-button"
+        aria-controls={open ? 'basic-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
+        onClick={handleClick}
+      >
+        Share
+      </Button>
+      <Menu
+        id="basic-menu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
+        }}
+      >
+        <MenuItem onClick={handleClose}>
+        <ListItemIcon>
+          <TwitterIcon fontSize="small" />
+        </ListItemIcon>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+        <ListItemIcon>
+          <InstagramIcon fontSize="small" />
+        </ListItemIcon>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+        <ListItemIcon>
+          <WhatsAppIcon fontSize="small" />
+        </ListItemIcon>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+        <ListItemIcon>
+          <LinkedInIcon fontSize="small" />
+        </ListItemIcon>
+        </MenuItem>
+      </Menu>
+    </div>
+  );
+}
 
 export function MultiActionAreaCard(props) {
   return (
@@ -31,7 +95,8 @@ export function MultiActionAreaCard(props) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Share/>
+        {/* <Share/> */}
+        <BasicMenu/>
       </CardActions>
     </Card>
   );
@@ -40,11 +105,11 @@ export function MultiActionAreaCard(props) {
 export const Gallery = () => {
   return (
     <section>
-      <h1>Eventos</h1>
       <div className='rowC'>
         <MultiActionAreaCard imagefile={minec} title="Minecraft" />
         <MultiActionAreaCard imagefile={minec2} title="Minecraft2" />
         <MultiActionAreaCard imagefile={minec} title="Minecraft3" />
+        <MultiActionAreaCard imagefile={minec2} title="Minecraft4" />
       </div>
     </section>
   )

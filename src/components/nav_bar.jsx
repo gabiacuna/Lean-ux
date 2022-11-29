@@ -1,3 +1,4 @@
+import { DialogContent } from '@mui/material'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
@@ -14,7 +15,7 @@ export const NavBar = () => {
         className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`}
         to='/internal'
       >
-        Ver Todo
+        Eventos
       </NavLink>
     </nav>
   )
