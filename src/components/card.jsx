@@ -6,6 +6,8 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea, CardActions, ListItemText } from '@mui/material';
 import minec from '../assets/test.png'
 import minec2 from '../assets/test2.png'
+import cyber from '../assets/cyber.jpg'
+import FS from '../assets/FS.jpg'
 
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -17,6 +19,8 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 
+import Chip from '@mui/material/Chip';
+import Stack from '@mui/material/Stack';
 
 export function BasicMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -88,6 +92,13 @@ export function MultiActionAreaCard(props) {
           <Typography gutterBottom variant="h5" component="div">
             {props.title}
           </Typography>
+          <Typography variant="h7" component="div">
+            {props.date}
+          </Typography>
+          <Stack direction="row" spacing={1}>
+            <Chip label={props.tag1} />
+            <Chip label={props.tag2} variant="outlined" />
+          </Stack>
           <Typography variant="body2" color="text.secondary">
             Lizards are a widespread group of squamate reptiles, with over 6,000
             species, ranging across all continents except Antarctica
@@ -106,10 +117,10 @@ export const Gallery = () => {
   return (
     <section>
       <div className='rowC'>
-        <MultiActionAreaCard imagefile={minec} title="Minecraft" />
-        <MultiActionAreaCard imagefile={minec2} title="Minecraft2" />
-        <MultiActionAreaCard imagefile={minec} title="Minecraft3" />
-        <MultiActionAreaCard imagefile={minec2} title="Minecraft4" />
+        <MultiActionAreaCard imagefile={cyber} title="Ciberevento Informatica" date="7 de Diciembre" tag1="Ciberseguridad" tag2="Informatica"/>
+        <MultiActionAreaCard imagefile={FS} title="Fiesta Fin de Semestre" date="18 de Diciembre" tag1="Recreativo" tag2="Valparaiso"/>
+        <MultiActionAreaCard imagefile={minec} title="Evento Minecraft 1" date="20 de Diciembre" tag1="Recreativo" tag2="Informatica"/>
+        <MultiActionAreaCard imagefile={minec2} title="Evento Minecraft Final" date="21 de Diciembre" tag1="Recreativo" tag2="Informatica"/>
       </div>
     </section>
   )
