@@ -100,8 +100,7 @@ export function MultiActionAreaCard(props) {
             <Chip label={props.tag2} variant="outlined" />
           </Stack>
           <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            {props.texto}
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -117,10 +116,10 @@ export const Gallery = () => {
   return (
     <section>
       <div className='rowC'>
-        <MultiActionAreaCard imagefile={cyber} title="Ciberevento Informatica" date="7 de Diciembre" tag1="Ciberseguridad" tag2="Informatica"/>
-        <MultiActionAreaCard imagefile={FS} title="Fiesta Fin de Semestre" date="18 de Diciembre" tag1="Recreativo" tag2="Valparaiso"/>
-        <MultiActionAreaCard imagefile={minec} title="Evento Minecraft 1" date="20 de Diciembre" tag1="Recreativo" tag2="Informatica"/>
-        <MultiActionAreaCard imagefile={minec2} title="Evento Minecraft Final" date="21 de Diciembre" tag1="Recreativo" tag2="Informatica"/>
+        <MultiActionAreaCard imagefile={cyber} title="Ciberevento Informatica" date="7 de Diciembre" tag1="Ciberseguridad" tag2="Informatica" texto="Ven a aventurarte en el mundo del hackeo de base datos"/>
+        <MultiActionAreaCard imagefile={FS} title="Fiesta Fin de Semestre" date="18 de Diciembre" tag1="Recreativo" tag2="Valparaiso" texto="Super fiesta en conjunto a profesores para cerrar el año"/>
+        <MultiActionAreaCard imagefile={minec} title="Evento Minecraft 1" date="20 de Diciembre" tag1="Recreativo" tag2="Informatica" texto="Comienzo evento decimo vigesimo aniversario de los juegos del hambre"/>
+        <MultiActionAreaCard imagefile={minec2} title="Evento Minecraft Final" date="21 de Diciembre" tag1="Recreativo" tag2="Informatica" texto="Final evento decimo vigesimo aniversario de los juegos del hambre"/>
       </div>
     </section>
   )
